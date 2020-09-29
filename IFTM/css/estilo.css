@@ -1,0 +1,36 @@
+body {
+    text-align: center;
+    font-family: purisa;
+    font-size: 70%;
+}
+
+#cabecalho {
+    width: 80%;
+    background-color: lightblue;
+    height: 50px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+#container {
+    width: 80%;
+    background-color: lightblue;
+    height: 500px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+#dist1 {
+    width: 80%;
+    background-color: white;
+    height: 5px;
+    margin: 0 auto;
+    padding-top: 1px;
+}
+#rodape {
+    width: 80%;
+    background-color: lightblue;
+    height: 50px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+div.text1 {
+}
