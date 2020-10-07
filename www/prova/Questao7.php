@@ -9,7 +9,14 @@
 //Para $s1 = "aabcc"e $s2 = "adcaa", o retorno deve ser 3.
 //As strings têm 3 caracteres comuns 2 "a" e 1"c".
 
+
+$s1 = "aabcc";
+$s2 = "adcaa";
 function commonCharacterCount($s1, $s2)
-{
-    // CÓDIGO
-}
+{ 
+    $a1 = str_split($s1);
+    $a2 = str_split($s2);
+    $common = array_intersect($a1, $a2);
+    return count($common);
+    var_dump($common);
+}          

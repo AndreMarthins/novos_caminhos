@@ -32,7 +32,7 @@ class User
      */
     public function setFirstName(string $firstName)
     {
-        $this->firstName = filter_var($firstName, FILTER_SANITIZE_STRING);
+        $this->firstName = filter_var($firstName, FILTER_SANITIZE_STRING); //limpa os dados do código boa prática de programação
 
         return $this;
     }

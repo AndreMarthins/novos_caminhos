@@ -35,8 +35,11 @@ var_dump(get_defined_constants(true)["user"]);
 PHPClassSession('Constantes Mágicas', __LINE__);
 
 var_dump([
-    __DIR__,
-    __FILE__,
+    __DIR__,//caminho absoluto
+    __FILE__,//caminho absoluto e nome do arquivo
     __LINE__,
     __CLASS__
 ]);
+
+var_dump(get_defined_constants(true));//saber todas as constantes do sistema
+var_dump(get_defined_constants(true)["user"]);//saber todas as constantes usadas pelo usuário

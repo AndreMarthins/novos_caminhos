@@ -17,5 +17,13 @@
 
 function adjacentElementsProduct($inputArray)
 {
-    // CÓDIGO
+    $a = array(3,6);
+    $b = array(-2,-5);
+    $c = array(7,3);
+
+    $prodArray1 = array_product($a);
+    $prodArray2 = array_product($b);
+    $prodArray3 = array_product($c);
+
+    echo max($prodArray1, $prodArray2, $prodArray3);
 }

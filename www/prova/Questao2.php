@@ -16,7 +16,14 @@
 // true se inputString é um palíndromo,
 // false se caso contrário.
 
+
+
+
 function checkPalindrome($inputString)
 {
-    
+    if($string == $inputString){
+    var_dump((bool) 1);}    
+        else {
+            var_dump((bool) "");  
+            }  
 }
