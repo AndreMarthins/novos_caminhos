@@ -45,6 +45,4 @@ VALUES
   (4, 'Otis C. Hitt', 'Conalothe', 'zooFohH7w'),
   (5, 'Roger N. Brownfield', 'Worseente', 'fah7ohN');
   
-  UPDATE account set password = md5 (password);
-  
-  SELECT id, password FROM account;
+  SELECT password,md5(password) FROM account;
