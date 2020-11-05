@@ -12,5 +12,5 @@
 
 function allLongestStrings($inputArray)
 {
-    // CÓDIGO
+
 }

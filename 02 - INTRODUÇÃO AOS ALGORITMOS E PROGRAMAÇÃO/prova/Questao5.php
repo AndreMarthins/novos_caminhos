@@ -17,7 +17,34 @@
 // Como alternativa, você pode remover 2 para obter a
 // sequência estritamente crescente [1, 3].
 
-function almostIncreasingSequence($sequence)
-{
-    // CÓDIGO
+
+
+
+function almostIncreasingSequence($sequence) {
+  $foundOne = false;
+
+    for ($i = -1, $j = 0, $k = 1; $k < count($sequence); $k++) {
+        $deleteCurrent = false;
+        if ($sequence[$j] >= $sequence[$k])
+        {
+            if ($foundOne)
+            {
+                return false;
+            }
+            $foundOne = true;
+            if ($k > 1 && $sequence[$i] >= $sequence[$k])
+            {
+                $deleteCurrent = true;
+            }
+        }
+        if (!$foundOne)
+        {
+            $i = $j;
+        }
+        if (!$deleteCurrent)
+        {
+            $j = $k;
+        }
+    }
+    return true;
 }
