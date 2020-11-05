@@ -25,3 +25,22 @@ id	    name                    amount      price
 -- EXEMPLO DE SAÍDA ESPERADO
 price	    price
 800         25.50
+
+CREATE TABLE products (
+id numeric NOT NULL,
+name    	    varchar(255),
+amount          numeric,
+price  	    	numeric,
+PRIMARY KEY AUTO_INCREMENT (id)
+);
+
+INSERT INTO products(id, name, amount, price)
+VALUES
+(1, 'Two-doors wardrobe', 100, 8005),
+(2, 'Dining table', 1000, 560),
+(3, 'Towel holder', 10000, 25.50),
+(4, 'Computer desk', 350, 320.50),
+(5, 'Chair', 3000, 210.64),
+(6, 'Single bed', 750, 460);
+
+SELECT max(price), min(price) FROM products;

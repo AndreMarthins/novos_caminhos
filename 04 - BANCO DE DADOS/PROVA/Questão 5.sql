@@ -39,3 +39,39 @@ id_customers	cnpj        	contact
 name	
 Nicolas Diogo Cardoso	
 Sabrina Heloisa Gabriela Barros
+
+CREATE TABLE customers (
+id numeric NOT NULL,
+name    	    varchar(255),
+street          varchar(255),
+city    	    varchar(255),
+state   	    varchar(2),
+credit_limit    numeric, 
+PRIMARY KEY AUTO_INCREMENT (id)
+);
+
+CREATE TABLE legal_person(
+id_customers numeric NOT NULL,
+PRIMARY KEY AUTO_INCREMENT (id_customers),
+FOREIGN KEY (id_customers) REFERENCES customers(id),
+cnpj                varchar(18),
+contact             varchar(25) 
+);
+
+INSERT INTO customers(id, name, street, city, state, credit_limit)
+VALUES
+(1, 'Nicolas Diogo Cardoso', 'Acesso Um', 'Porto Alegre', 'RS', 475),
+(2, 'Cecília Olivia Rodrigues', 'Rua Sizuka', 'Cianorte', 'PR', 3170),
+(3, 'Augusto F. C. E. Cardoso', 'Rua Baldomiro', 'Palhoça', 'SC', 1067),
+(4, 'Nicolas Diogo Cardoso', 'Acesso Um', 'Porto Alegre', 'RS', 475),
+(5, 'Sabrina H. G. Barros', 'Rua Engenheiro', 'Porto Alegre', 'RS', 4312),
+(6, 'Joaquim D. L. Araújo', 'Rua Vitorino', 'Novo Hamburgo', 'RS', 231);
+
+INSERT INTO legal_person(id_customers, cnpj, contact) VALUES
+(4, '85883842000191', '99767-0562'),	
+(5, '47773848000117', '99100-8965');
+
+SELECT name
+FROM legal_person 
+INNER JOIN customers ON id = id_customers
+WHERE cnpj
